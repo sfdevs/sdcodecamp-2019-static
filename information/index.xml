@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Information on South Dakota Code Camp</title>
-    <link>https://sfdevs.github.com/sdcodecamp-2019-static/information/</link>
+    <link>https://sfdevs.com/sdcodecamp-2019-static/information/</link>
     <description>Recent content in Information on South Dakota Code Camp</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 19 Sep 2018 08:51:54 -0500</lastBuildDate>
     
-	<atom:link href="https://sfdevs.github.com/sdcodecamp-2019-static/information/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://sfdevs.com/sdcodecamp-2019-static/information/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>About Us</title>
-      <link>https://sfdevs.github.com/sdcodecamp-2019-static/information/about-us/</link>
+      <link>https://sfdevs.com/sdcodecamp-2019-static/information/about-us/</link>
       <pubDate>Thu, 20 Sep 2018 12:25:32 -0500</pubDate>
       
-      <guid>https://sfdevs.github.com/sdcodecamp-2019-static/information/about-us/</guid>
+      <guid>https://sfdevs.com/sdcodecamp-2019-static/information/about-us/</guid>
       <description>South Dakota Code Camp is The Mount Rushmore State&amp;rsquo;s largest developer conference. We are an annual event held in Sioux Falls, SD. The event is completely free, covered entirely by our gracious sponsors.
 South Dakota Code Camp follows the guidelines published in the Code Camp manifesto. We expect our attendees to adhere to our code of conduct policy.
 As this is a community-driven event, we are always looking for people to lead sessions, volunteer to help during the day of the event, etc.</description>
@@ -24,10 +24,10 @@ As this is a community-driven event, we are always looking for people to lead se
     
     <item>
       <title>Code of Conduct</title>
-      <link>https://sfdevs.github.com/sdcodecamp-2019-static/information/code-of-conduct/</link>
+      <link>https://sfdevs.com/sdcodecamp-2019-static/information/code-of-conduct/</link>
       <pubDate>Wed, 19 Sep 2018 08:52:24 -0500</pubDate>
       
-      <guid>https://sfdevs.github.com/sdcodecamp-2019-static/information/code-of-conduct/</guid>
+      <guid>https://sfdevs.com/sdcodecamp-2019-static/information/code-of-conduct/</guid>
       <description>South Dakota Code Camp is a community conference intended for networking and collaboration in the developer community.
 We value the participation of each member of the SFDevs community and want all attendees to have an enjoyable and fulfilling experience. Accordingly, all attendees are expected to show respect and courtesy to other attendees throughout the conference and at all conference events, whether officially sponsored by SFDevs or not.
 To make clear what is expected, all delegates/attendees, speakers, exhibitors, organizers and volunteers at any SFDevs event are required to conform to the following Code of Conduct.</description>
