@@ -1,0 +1,104 @@
+//
+// Buttons
+//
+
+.btn {
+    position: relative;
+    padding: .813rem 1.75rem .688rem;
+    border: 0;
+    border-radius: 0;
+    text-decoration: none !important;
+    text-transform: uppercase;
+    font-weight: 900;
+    transition: all 450ms cubic-bezier(.19, 1, .22, 1);
+    // transform: skew(0deg, -1.5deg);
+
+    &:after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: -1;
+        display: block;
+        margin-top: -17px;
+        width: 34px;
+        height: 34px;
+        background-color: inherit;
+        content: '';
+        transition: left 250ms cubic-bezier(.19, 1, .22, 1);
+        transform: rotate(45deg);
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        box-shadow: none;
+        transform: rotate(0deg);
+
+        &:after {
+            left: calc(100% - 17px);
+        }
+    }
+
+    &.btn-lg {
+        &:after {
+            margin-top: -19px;
+            width: 38px;
+            height: 38px;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+            &:after {
+                left: calc(100% - 19px);
+            }
+        }
+    }
+}
+
+// Button primary
+.btn-primary {
+    background-color: blue;
+    color: white;
+
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: blue;
+        color: white;
+    }
+}
+
+.btn-camp {
+    position: relative;
+    z-index: 5;
+    background-color: blue;
+    color: white;
+
+    &:hover,
+    &:active,
+    &:focus,
+    &:active:focus {
+        background-color: #001e4d;
+        color: white;
+    }
+}
+
+// Button secondary
+.btn-secondary {
+    background-color: $color-link;
+    color: white;
+
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: $color-secondary;
+        color: black;
+    }
+}
+
+// Button reversed colors;
+.btn-reverse {
+    background: white;
+    color: $color-primary;
+}

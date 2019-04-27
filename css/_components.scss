@@ -1,0 +1,620 @@
+//
+// Component related
+//
+
+// Panelled list
+.c-list-panelled {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    li {
+        margin-bottom: rem(2);
+        padding: 1.4rem;
+        background-color: white;
+
+        > *:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.c-panel {
+    margin-bottom: rem(2);
+    padding: 1.4rem;
+    background-color: white;
+
+    > *:last-child {
+        margin-bottom: 0;
+    }
+}
+
+// Avatar
+.c-avatar {
+    width: rem(17);
+    height: rem(17);
+
+    img {
+        width: 100%;
+    }
+}
+
+// WYSIWYG
+.c-wysiwyg,
+.post {
+    p,
+    ul,
+    ol,
+    img,
+    embed,
+    iframe,
+    table,
+    blockquote,
+    .embed-responsive {
+        margin-top: 0;
+        margin-bottom: 1.5rem;
+    }
+
+    h1, .h1,
+    h2, .h2,
+    h3, .h3,
+    h4, .h4,
+    h5, .h5,
+    h6, .h6 {
+        strong {
+            font-weight: 900;
+        }
+    }
+
+    h1, .h1 {
+        margin-bottom: 1.5rem;
+    }
+
+    h2, .h2 {
+        margin-bottom: 1.25rem;
+    }
+
+    h3, .h3 {
+        margin-bottom: 1rem;
+    }
+
+    h4, .h4,
+    h5, .h5,
+    h6, .h6 {
+        margin-bottom: .75rem;
+    }
+
+    hr {
+        margin-bottom: 2rem;
+    }
+
+    img {
+        max-width: 100%;
+        width: auto;
+    }
+
+    li {
+        margin-bottom: 1rem;
+    }
+
+    blockquote {
+        padding-left: 1rem;
+        border-left: .25rem solid gray;
+    }
+
+    > :last-child {
+        margin-bottom: 0;
+    }
+
+    .float-right,
+    .float-left {
+        display: block;
+        float: none !important;
+    }
+    @media (min-width: 560px) {
+        .float-right {
+            float: right !important;
+            margin-bottom: 1rem;
+            margin-left: 1rem;
+            max-width: 50%;
+        }
+
+        .float-left {
+            float: left !important;
+            margin-right: 1rem;
+            margin-bottom: 1rem;
+            max-width: 50%;
+        }
+    }
+}
+
+// Button campground stuff
+.btn-presentation {
+    position: relative;
+    display: inline-block;
+}
+
+.camp-element {
+    position: absolute;
+    transition: all 200ms cubic-bezier(.19, 1, .22, 1);
+    pointer-events: none;
+}
+
+.camp-element--sky {
+    bottom: -4px;
+    left: calc(50% - 340px);
+    z-index: -3;
+    transform: scale(0);
+    transform-origin: 50% 90%;
+}
+
+.camp-element--comet {
+    bottom: calc(100% + 2.5rem);
+    left: 50%;
+    z-index: -2;
+    display: none;
+    width: 55px;
+    transform: scale(.5);
+}
+
+.camp-element--moon {
+    bottom: 145%;
+    left: 38%;
+    width: .625rem;
+    opacity: 0;
+    transform: translateY(1rem);
+}
+
+.camp-element--stars {
+    bottom: calc(100% - 2px);
+    left: 22%;
+    z-index: 1;
+    width: 4.75rem;
+    opacity: 0;
+    transform: scale(2);
+}
+
+.camp-element--tent {
+    bottom: calc(100% - 1rem);
+    left: 39%;
+    z-index: 7;
+    width: 2.5625rem;
+    transform: translateY(20px) scale(0);
+}
+
+.camp-element--pine-tree {
+    bottom: 99%;
+    left: 62%;
+    z-index: -1;
+    width: 1rem;
+    opacity: 0;
+    transform: translateY(50%);
+}
+
+.camp-element--pine-tree--sm {
+    left: 72%;
+    width: .6875rem;
+}
+
+.camp-element--pine-tree--left {
+    left: 25%;
+    width: .875rem;
+    transform: translateY(50%);
+
+    &.camp-element--pine-tree--sm {
+        left: 18%;
+        width: .5rem;
+    }
+}
+
+.cta-camp {
+    display: inline-block;
+
+    &:hover,
+    &:focus,
+    &:active {
+        ~ .camp-element--sky {
+            transform: scale(1);
+        }
+
+        ~ .camp-element--tent {
+            transform: translateY(0) scale(1);
+        }
+
+        ~ .camp-element--comet {
+            display: block;
+            opacity: 0;
+            animation: falling_star 2000ms linear;
+            animation-iteration-count: 1;
+        }
+
+        ~ .camp-element--pine-tree {
+            z-index: -1;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        ~ .camp-element--pine-tree--left {
+            transition-delay: 100ms;
+
+            &.camp-element--pine-tree--sm {
+                transition-delay: 50ms;
+            }
+        }
+
+        ~ .camp-element--pine-tree--right {
+            transition-delay: 150ms;
+
+            &.camp-element--pine-tree--sm {
+                transition-delay: 200ms;
+            }
+        }
+
+        ~ .camp-element--stars {
+            opacity: 1;
+            transition-delay: 250ms;
+            transform: scale(1.2) rotate(-5deg);
+        }
+
+        ~ .camp-element--moon {
+            opacity: 1;
+            transition-delay: 500ms;
+            transition-duration: 1000ms;
+            transform: translateY(0);
+        }
+    }
+}
+
+
+
+
+.camp-element--cloud {
+    bottom: 147%;
+    left: 30%;
+    width: 2rem;
+    animation: floating 8s ease-in-out infinite;
+}
+
+.camp-element--hatchet {
+    bottom: 109%;
+    left: 75%;
+    width: .625rem;
+    transform: rotate(18deg);
+    animation: hatchet-throw 700ms linear infinite;
+}
+
+.camp-element--stump {
+    bottom: 90%;
+    left: 78%;
+    width: 1.6875rem;
+}
+
+.camp-element--ufo,
+.camp-element--ufo-beam {
+    display: none;
+}
+
+.camp-element--abductor {
+    position: absolute;
+    bottom: -20px;
+    left: 10px;
+    width: 20px;
+}
+
+.camp-element--ufo-beam {
+    visibility: hidden;
+    overflow: hidden;
+}
+
+.area-51 {
+    ~ .camp-element--ufo,
+    ~ .camp-element--ufo-beam {
+        bottom: 165%;
+        left: 70%;
+        display: block;
+        width: 40px;
+        opacity: 0;
+    }
+
+    ~ .camp-element--ufo {
+        animation: hover_down 10000ms ease-in-out forwards;
+    }
+
+    ~ .camp-element--ufo-beam {
+        bottom: 82%;
+        visibility: hidden;
+        animation: hover_down 10000ms ease-in-out forwards, beam_on 10000ms linear forwards;
+
+        .camp-element--abductor {
+            animation: abduct 10000ms linear forwards;
+        }
+    }
+}
+
+@keyframes falling_star {
+    0% {
+        opacity: 0;
+        transform: translateX(0, 0, 0) scale(1);
+    }
+
+    50% {
+        opacity: 0;
+        transform: translateX(150%) rotate(-4deg) scale(1);
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate3d(-250%, 1.25rem, 0) rotate(-4deg) scale(1);
+    }
+}
+
+@keyframes beam_on {
+    0% {
+        visibility: hidden;
+    }
+
+    6% {
+        visibility: hidden;
+    }
+
+    7% {
+        visibility: visible;
+    }
+
+    94% {
+        visibility: visible;
+    }
+
+    95% {
+        visibility: hidden;
+    }
+
+    100% {
+        visibility: hidden;
+    }
+}
+
+@keyframes hover_down {
+    0% {
+        opacity: 1;
+        transform: translateY(-100px);
+    }
+
+    5% {
+        opacity: 1;
+        transform: translateY(1px);
+    }
+
+    10% {
+        opacity: 1;
+        transform: translateY(-1px);
+    }
+
+    15% {
+        opacity: 1;
+        transform: translateY(1px);
+    }
+
+    20% {
+        opacity: 1;
+        transform: translateY(-1px);
+    }
+
+    25% {
+        opacity: 1;
+        transform: translateY(1px);
+    }
+
+    30% {
+        opacity: 1;
+        transform: translateY(-1px);
+    }
+
+    35% {
+        opacity: 1;
+        transform: translateY(1px);
+    }
+
+    40% {
+        opacity: 1;
+        transform: translateY(-1px);
+    }
+
+    45% {
+        opacity: 1;
+        transform: translateY(1px);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(-1px);
+    }
+
+    55% {
+        opacity: 1;
+        transform: translateY(1px);
+    }
+
+    60% {
+        opacity: 1;
+        transform: translateY(-1px);
+    }
+
+    65% {
+        opacity: 1;
+        transform: translateY(1px);
+    }
+
+    70% {
+        opacity: 1;
+        transform: translateY(-1px);
+    }
+
+    75% {
+        opacity: 1;
+        transform: translateY(1px);
+    }
+
+    80% {
+        opacity: 1;
+        transform: translateY(-1px);
+    }
+
+    85% {
+        opacity: 1;
+        transform: translateY(1px);
+    }
+
+    90% {
+        opacity: 1;
+        transform: translateY(-1px);
+    }
+
+    95% {
+        opacity: 1;
+        transform: translateY(1px);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+}
+
+@keyframes abduct {
+    0% {
+        opacity: 0;
+    }
+
+    19% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-80px);
+    }
+}
+
+.training {
+    position: absolute;
+    bottom: 100%;
+    left: 100%;
+    z-index: 1000;
+    width: 22.2222rem;
+
+    &.js-training--active {
+        transition: transform 15000ms linear;
+        transform: translateX(calc(-100vw - 23.3333rem));
+    }
+}
+
+.training__little-mac {
+    float: right;
+    width: 32px;
+}
+
+.training__trainer {
+    width: 68px;
+}
+
+// Eventbrite widget
+.loading-container {
+    position: relative;
+    height: 26.5625rem;
+    background-color: rgba(#fff, .3);
+    transition: none !important;
+}
+
+.loading {
+    position: absolute;
+    top: 8.125rem;
+    left: calc(50% - 7.8125rem);
+    margin-right: auto;
+    margin-left: auto;
+    width: 15.625rem;
+}
+
+.loading__text {
+    display: block;
+    margin-bottom: .625rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: .875rem;
+}
+
+
+.loading__bar {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 1.9444rem;
+    border: 3px solid #000;
+    background-color: #fff;
+
+    &:after {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: aqua;
+        content: '';
+        transform-origin: 0% 0%;
+        animation: loading__loop 10000ms cubic-bezier(.19, 1, .22, 1) infinite;
+    }
+}
+
+@keyframes loading__loop {
+    0% {
+        // transform: translate3d(-120px, 0, 0);
+        transform: scale(0, 1);
+    }
+
+    20% {
+        transform: scale(1, 1);
+    }
+
+    90% {
+        transform: scale(1, 1);
+    }
+
+    100% {
+        transform: scale(0, 1);
+    }
+}
+
+.post {
+    padding-bottom: 1.75rem;
+    border-bottom: 1px dotted black;
+
+    &:last-child {
+        padding-bottom: 0;
+        border-bottom: 0;
+    }
+}
+
+.c-list-sponsors {
+    list-style-type: none;
+    margin: 0;
+    padding: 1.25rem 0;
+    text-align: center;
+
+    li {
+        display: inline-block;
+        width: 100%;
+        padding: 1.25rem;
+    }
+
+    img {
+        margin: 0;
+    }
+}

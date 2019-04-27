@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://southdakotacodecamp.com/information/about-us/</loc>
+    <lastmod>2018-10-22T16:35:25-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://southdakotacodecamp.com/information/code-of-conduct/</loc>
+    <lastmod>2018-10-22T16:35:25-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://southdakotacodecamp.com/information/</loc>
+    <lastmod>2018-09-19T14:44:21-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://southdakotacodecamp.com/schedule/sessions/</loc>
+    <lastmod>2018-10-24T14:54:18-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://southdakotacodecamp.com/</loc>
+    <lastmod>2018-10-05T13:35:53-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://southdakotacodecamp.com/speakers/</loc>
+    <lastmod>2018-10-11T10:38:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://southdakotacodecamp.com/schedule/</loc>
+    <priority>0</priority>
+  </url>
+  
+</urlset>
